@@ -1,0 +1,218 @@
+/*
+Theme Name:     Stephen Metcalfe
+Description:    Custom Theme for Stephenmetcalfe.net by http://mattcromwell.com
+Author:         Matt Cromwell
+Author URI: http://mattcromwell.com
+Template:       editor
+*/
+
+/*GLOBAL*/
+@import url("../editor/style.css");
+
+p, h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+h1, h2, h3 {
+font-weight: 700;
+font-style: italic;
+}
+
+body {text-align: center; background: #ccc;}
+
+/*Adjusting the layout*/
+
+#page {width: 90%; max-width: 960px; margin: 0 auto; text-align: left;}
+
+.site-header {background: transparent; max-width: 250px;}
+
+.site-branding {
+	width: 100%;
+	position: fixed;
+	height: 175px;
+	right: 0em;
+	top: 90px;
+}
+.main-navigation {
+clear: both;
+display: block;
+float: none;
+padding-top: 190px;
+width: 100%;
+text-align: right;
+}
+
+.admin-bar .site-header {
+top: 5%;
+text-align: center;
+}
+
+.site-content {padding: 5% 6% 0 26%;}
+
+.content-area {
+max-width: 1000px;
+background: white;
+padding: 2em;
+}
+
+.site-logo.narrow {display:none;}
+
+/*NEW*/
+.toggle-bar {
+background: rgba(255,255,255,.5);
+padding: 8px 4px;
+text-align: center;
+}
+
+.toggle-bar li {margin-right: 2em;}
+
+.toggle-bar a {
+color: #2a1d1a;
+font-size: .75em;
+display: inline-block;
+padding: .25em .4em;
+border-radius: 4px;
+}
+
+ul.toggle-bar .fa {
+display: block;
+text-align: center;
+line-height: 1;
+margin: 0 0 -3px 0;
+}
+
+.toggle-bar a:hover {
+color: #7f6b67;
+background: #2a1d1a;
+}
+
+.toggle-bar a.current,
+.toggle-bar a.current:hover {background: transparent;
+cursor: default;
+color: #DED8D7;}
+
+.main-navigation a {
+font-family: 'Playfair Display', serif;
+color: #2a1d1a;
+}
+.main-navigation li.current-menu-item a:before {
+content: url('images/chevron.png');
+display: inline-block;
+padding-right: 0.5em;
+}
+
+.widget-area .widget-title, 
+.widget-area .widgettitle, 
+.widget-area .widget > ul, 
+.widget-area .widget li:last-child, 
+.widget-area .widget .menu,
+.no-posts p {
+text-transform: none;
+text-align: right;
+}
+
+#tab-3 #secondary a,
+#tab-3 #secondary a h4 {
+font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 1em;
+}
+
+.widget-area .widget {
+margin-bottom: 0px;
+}
+
+.widget-area .featured-post {text-align: right;}
+
+.meta-cat,
+span.author.vcard {
+font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-transform: none;
+}
+
+.single .post, .page .post, .error404 .post, .archive .post:last-child {
+text-align: left;
+}
+.entry-content {
+font-family: 'Playfair Display', serif;
+color: #6b5d4b;
+}
+article.page .entry-content {
+width: 100%;
+}
+body.home img.attachment-featured-post-image {display: none;}
+
+/*FOOTER*/
+.site-footer {
+padding: 0 6% 4% 26%;
+}
+
+/*HOMEPAGE*/
+body.home .entry-title {
+display: none;
+}
+
+body.home .entry-content p:first-child:first-letter { 
+	float: left; 
+	color: #2a1d1a; 
+	font-size: 4.236em; 
+	line-height: 60px; 
+	padding: 4px 8px 0 0;
+	font-style: italic;
+	font-weight: 700;
+	}
+/*Media Queries*/
+@media (max-width: 768px) {
+	.site-logo.wide,
+	.site-main .logo	{display:none;}
+	.site-logo.narrow {display:block;}
+	
+	.site-header {background: #f5f5f5; max-width: 100%; padding: 70px 5% 0px 5%;}
+	
+	.site-branding {
+		width: auto;
+		position: relative;
+		height: auto;
+		right: auto;
+		top: auto; 
+	}
+	
+	.site-content {
+		padding: 5% 0 0 0;
+	}
+	
+	.main-navigation {
+		padding: 0;
+		text-align: center;
+	}
+	
+	.main-navigation li,
+	.main-navigation li a {
+		display: inline-block;
+	}
+	
+	.main-navigation li.current-menu-item a:before {
+		content: '';
+	}
+	
+	.main-navigation li:after,
+	#secondary.widget-area li:after	{
+		content: ' | ';
+		color: #aaa;
+	}
+	.main-navigation li:last-of-type:after,
+	#secondary.widget-area li:last-of-type:after	{
+		content: '';
+	}
+	
+	#secondary, .widget-area .widget-title, .widget-area .widgettitle, .widget-area .widget > ul, .widget-area .widget li:last-child, .widget-area .widget .menu, .no-posts p {text-align: center;}
+	
+	#secondary.widget-area li {display: inline-block;}
+	
+	.widget-area .featured-post {
+		width: 30%;
+		margin-right: 2%;
+	}
+	
+	.site-footer {
+		padding: 0;
+	}
+}
